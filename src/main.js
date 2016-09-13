@@ -13,6 +13,9 @@ It will be passed automatically via proxy server
 function loadUsers(username) {
   const url = `${API_PROXY_URL}/${GAME}/account/list/?search=${username}`
   // create request to the url and return a promise
+  return fetch(url)
+  .then(response => response.json())
+  .then(responseJson => responseJson.data);
 }
 
 function renderSpinner(domNode) {
@@ -27,7 +30,6 @@ function renderSearchResult(accounts) {
 }
 
 function handleSearchClick(e) {
-  
   console.log('Hello');
 }
 
