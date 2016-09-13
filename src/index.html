@@ -8,11 +8,18 @@
 <body>
   <div class="search">
     <form>
-      <input id="username" type="search" placeholder="search for username" name="search" value="">
+      <input id="username" type="search" placeholder="search for username" name="search" value="test">
       <button id="search" type="button" name="button">Search</button>
     </form>
   </div>
-  <div class="search-results">
+  <div id="error-message" class="error"></div>
+  <div class="results">
+    <div id="spinner" class="spinner"></div>
+
+    <div class="view">
+      <div class="view_list" id="search-results"></div>
+      <div class="view_profile" id="profile"></div>
+    </div>
   </div>
 </body>
 </html>
