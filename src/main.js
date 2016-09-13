@@ -26,6 +26,13 @@ function renderSearchResult(accounts) {
   // inside node with `search-results_item` class name.
 }
 
+function handleSearchClick(e) {
+  
+  console.log('Hello');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // add search button click handler here
+  const button = document.querySelector('#search');
+  button.addEventListener('click', handleSearchClick);
 })
