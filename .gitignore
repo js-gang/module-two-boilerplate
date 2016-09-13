@@ -32,7 +32,7 @@ jspm_packages
 
 # Optional npm cache directory
 .npm
-
+dist
 # Optional REPL history
 .node_repl_history
 

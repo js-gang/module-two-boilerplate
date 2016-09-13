@@ -11,13 +11,32 @@ body {
 }
 
 .spinner {
+  display: none;
   width: 64px;
   height: 64px;
   margin: auto;
   background: url(./images/spinner.gif) no-repeat;
   background-size: 64px 64px;
 }
+.spinner.show {
+  display: block;
+}
 
 .search-results_item {
     margin: 8px 0 0;
+}
+
+.view {
+  margin: 50px 0 0;
+  display: flex;
+}
+
+.view_list {
+  /* border: 1px solid red; */
+  flex: 1 0 auto;
+}
+
+.view_profile {
+  flex: 3 0 auto;
+  /*border: 1px solid red;*/
 }
