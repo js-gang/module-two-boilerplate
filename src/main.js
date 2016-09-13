@@ -93,8 +93,6 @@ function handleSearchClick(e) {
     toggleSpinner();
     alert(message);
   });
-
-  console.log('Hello');
 }
 
 function handleUserClick(e) {
