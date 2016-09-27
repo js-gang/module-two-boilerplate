@@ -11,6 +11,14 @@
     "rules": {
         "semi": [1, "never"],
         "camelcase": 0,
-        "import/prefer-default-export": 0
+        "import/prefer-default-export": 0,
+        "func-names": 0,
+        "prefer-arrow-callback": 0,
+        "import/no-extraneous-dependencies": 0,
+        "space-before-function-paren": [1, "never"],
+        "semi": [1, "never"],
+        "camelcase": 0,
+        "import/prefer-default-export": 0,
+        "func-names": 0
     }
 }

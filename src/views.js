@@ -2,7 +2,9 @@ import { handleUserClick } from './handlers'
 
 export function renderUser({ nickname, account_id }) {
   return `
-    <div class="search-results_item js-user" data-id="${account_id}">${nickname}</div>
+    <div class="search-results_item js-user" data-id="${account_id}">
+        ${nickname}
+    </div>
   `
 }
 
