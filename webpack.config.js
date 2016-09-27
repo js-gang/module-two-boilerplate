@@ -1,9 +1,11 @@
+/* eslint-disable */
+
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var CleanWebpackPlugin = require('clean-webpack-plugin')
 
 var path = require('path')
-
+var root = __dirname
 var appPath = path.join(__dirname, 'src')
 
 var env = process.env.NODE_ENV || 'dev'
@@ -18,7 +20,7 @@ var plugins = [
     minify: false
   }),
   new CleanWebpackPlugin(['dist'], {
-    root: appPath,
+    root: root,
     verbose: true
   })
 ]
@@ -35,7 +37,7 @@ module.exports = {
   devtool: 'inline-source-map',
   debug: debug,
   output: {
-    path: './src/dist',
+    path: './dist',
     filename: '[hash].[name].js'
   },
   devServer: {
@@ -46,7 +48,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel'
+        loaders: ['babel', 'eslint']
       },
       {
         test: /\.css$/,

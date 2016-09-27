@@ -13,5 +13,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // add search button click handler here
   const buttonNode = document.querySelector('#search')
   buttonNode.addEventListener('click', handleSearchClick)
-
 })

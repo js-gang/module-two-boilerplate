@@ -4,7 +4,7 @@ const GAME = 'wot'
 function makeRequest(url) {
   return fetch(url)
   .then(resp => resp.json())
-  .then(resp => new Promise(function(resolve, reject) {
+  .then(resp => new Promise((resolve, reject) => {
     if (resp.status === 'ok') {
       resolve(resp.data)
     } else if (resp.status === 'error') {
