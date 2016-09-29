@@ -11,11 +11,27 @@ body {
 }
 
 .spinner {
+    display: none;
   width: 64px;
   height: 64px;
   margin: auto;
   background: url(./images/spinner.gif) no-repeat;
   background-size: 64px 64px;
+}
+
+.spinner.show{
+    display: block;
+}
+.search-results {
+    display: flex;
+}
+
+.search-results_list {
+    flex: 1 0 auto;
+}
+
+.search-results_profile {
+    flex: 2 0 auto;
 }
 
 .search-results_item {
