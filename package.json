@@ -1,0 +1,34 @@
+{
+  "name": "dw-js-app",
+  "version": "0.0.1",
+  "description": "-",
+  "main": "main.js",
+  "scripts": {
+    "prestart": "echo 'Hello!'",
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stdword/module-two-boilerplate.git"
+  },
+  "keywords": [
+    "js",
+    "app",
+    "me"
+  ],
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stdword/module-two-boilerplate/issues"
+  },
+  "homepage": "https://github.com/stdword/module-two-boilerplate#readme",
+  "devDependencies": {
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.22.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
+  }
+}
