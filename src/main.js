@@ -1,8 +1,8 @@
 require('main.css')
 
-const api = require('./api/user')
-const spinner = require('./dom/spinner')
-const render = require('./dom/render')
+import api from 'api/user'
+import spinner from 'dom/spinner'
+import render from 'dom/render'
 
 
 spinner.hideSpinner();

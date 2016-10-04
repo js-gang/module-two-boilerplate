@@ -22,3 +22,10 @@ body {
 .search-results_item {
     margin: 8px 0 0;
 }
+
+#user-details {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 200px;
+}

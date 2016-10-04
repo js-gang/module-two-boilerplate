@@ -1,13 +1,11 @@
-const Spinner = {
-    renderSpinner: function () {
+export default class Spinner {
+    static renderSpinner() {
         const spinner = document.getElementById('spinner')
         spinner.hidden = false
-    },
+    }
 
-    hideSpinner: function () {
+    static hideSpinner() {
         const spinner = document.getElementById('spinner')
         spinner.hidden = true
-    },
+    }
 }
-
-module.exports = Spinner

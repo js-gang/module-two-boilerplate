@@ -1,9 +1,9 @@
-const api = require('../api/user')
-const spinner = require('./spinner')
+import api from 'api/user'
+import spinner from './spinner'
 
 
-const Render = {
-    renderSearchResult: function (accounts) {
+export default class Render {
+    static renderSearchResult(accounts) {
         const resultNode = document.getElementById('search-results');
         const list = document.createElement('ol');
         list.id = 'search-results_list';
@@ -40,9 +40,9 @@ const Render = {
             list.appendChild(item);
         }
         resultNode.appendChild(list);
-    },
+    }
 
-    renderUserDetails: function (nickname, account_id, wins, battles, rate) {
+    static renderUserDetails(nickname, account_id, wins, battles, rate) {
         const resultNode = document.getElementById('user-details');
         for (let child of resultNode.children) {
             if (child.id == 'user-details-id')
@@ -54,7 +54,5 @@ const Render = {
             else if (child.id == 'user-details-rate')
                 child.innerText = rate * 100;
         }
-    },
+    }
 }
-
-module.exports = Render
