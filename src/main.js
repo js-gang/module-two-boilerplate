@@ -1,8 +1,10 @@
-require('main.css')
+/* eslint-disable import/no-unresolved */
 
-import api from 'api/user'
-import spinner from 'dom/spinner'
-import render from 'dom/render'
+import api from 'api/user';
+import spinner from 'dom/spinner';
+import render from 'dom/render';
+
+import './main.css';
 
 
 spinner.hideSpinner();
@@ -17,12 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         api.loadUsers(input.value)
             .then(response => response.json())
-            .then(response_body => {
-                render.renderSearchResult(response_body.data);
+            .then((responseBody) => {
+                render.renderSearchResult(responseBody.data);
                 spinner.hideSpinner();
             })
-            .catch(e => {
-                console.log('Error: ', e);
+            .catch((e) => {
+                alert(e);
                 spinner.hideSpinner();
             });
     });
