@@ -4,6 +4,8 @@ import api from 'api/user';
 import spinner from 'dom/spinner';
 import render from 'dom/render';
 
+import 'bootstrap/dist/css/bootstrap.css'
+
 import './main.css';
 
 

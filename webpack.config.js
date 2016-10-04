@@ -1,4 +1,5 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack')
 const path = require('path')
 
 
@@ -27,10 +28,14 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loaders: ['style-loader', 'css-loader'],
+                loaders: ['style', 'css'],
             },
             {
-                test: /\.(gif|jpg|png|svg)$/,
+                test: /\.(gif|jpe?g|png|svg)$/,
+                loader: 'file',
+            },
+            {
+                test: /\.(woff2?|ttf|eot)$/,
                 loader: 'file',
             }
         ]
@@ -38,7 +43,8 @@ module.exports = {
 
     plugins: [
         new HTMLWebpackPlugin({
-            template: './src/index.html'
-        })
+            template: './src/index.html',
+        }),
+        new webpack.optimize.UglifyJsPlugin({sourceMap: false}),
     ]
 };

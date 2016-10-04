@@ -3,10 +3,6 @@ body {
   background-color: #fafafa;
 }
 
-.search_field {
-  width: 820px;
-}
-
 #spinner {
   width: 64px;
   height: 64px;

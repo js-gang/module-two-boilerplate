@@ -20,17 +20,15 @@ export default class Render {
     }
 
     static renderUserDetails(nickname, accountId, wins, battles, rate) {
-        const resultNode = document.getElementById('user-details');
-        for (const child of resultNode.children) {
-            if (child.id === 'user-details-id')
-                child.innerText = `${nickname} (${accountId})`;
-            else if (child.id === 'user-details-wins')
-                child.innerText = wins;
-            else if (child.id === 'user-details-battles')
-                child.innerText = battles;
-            else if (child.id === 'user-details-rate')
-                child.innerText = rate * 100;
-        }
+        const idNode = document.getElementById('user-details-id');
+        const winsNode = document.getElementById('user-details-wins');
+        const battlesNode = document.getElementById('user-details-battles');
+        const rateNode = document.getElementById('user-details-rate');
+
+        idNode.innerText = `${nickname} (${accountId})`;
+        winsNode.innerText = wins;
+        battlesNode.innerText = battles;
+        rateNode.innerText = rate * 100;
     }
 
     static _getHandler(accountId, accountNickname) {

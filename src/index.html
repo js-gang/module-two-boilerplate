@@ -5,21 +5,23 @@
   </head>
 
   <body>
-    <div>
-      <input id="username" class="search_field" type="search" placeholder="search for username" name="search" value="">
-      <button id="search" type="button">Search</button>
-    </div>
+    <form class="form-inline">
+      <div>
+        <input id="username" class="form-control" type="search" placeholder="search for username" name="search" value="">
+        <button id="search" class="btn btn-info" type="button">Search</button>
+      </div>
+    </form>
 
     <div id="spinner"></div>
 
     <div>
-      <span id="search-results"></span>
+      <div id="search-results"></div>
 
-      <span id="user-details">
-        <div id="user-details-id"></div>
-        <div id="user-details-wins"></div>
-        <div id="user-details-battles"></div>
-        <div id="user-details-rate"></div>
-      </span>
+      <div id="user-details">
+        <div><span>ID: </span><span id="user-details-id"></span></div>
+        <div><span>Wins: </span><span id="user-details-wins"></span></div>
+        <div><span>Battles: </span><span id="user-details-battles"></span></div>
+        <div><span>Rate: </span><span id="user-details-rate"></span></div>
+      </div>
     </div>
 </html>
