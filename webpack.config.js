@@ -45,6 +45,6 @@ module.exports = {
         new HTMLWebpackPlugin({
             template: './src/index.html',
         }),
-        new webpack.optimize.UglifyJsPlugin({sourceMap: false}),
+        //new webpack.optimize.UglifyJsPlugin({sourceMap: false}),
     ]
 };

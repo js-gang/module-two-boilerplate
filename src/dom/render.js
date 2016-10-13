@@ -12,7 +12,7 @@ export default class Render {
 
             item.class = 'search-results_item';
             item.innerText = accountInfo.nickname;
-            item.onclick = this._getHandler(accountInfo.account_id, accountInfo.nickname);
+            item.onclick = this.getHandler(accountInfo.account_id, accountInfo.nickname);
 
             list.appendChild(item);
         }
@@ -31,7 +31,7 @@ export default class Render {
         rateNode.innerText = rate * 100;
     }
 
-    static _getHandler(accountId, accountNickname) {
+    static getHandler(accountId, accountNickname) {
         return () => {
             spinner.renderSpinner();
 
