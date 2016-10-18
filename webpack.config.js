@@ -15,6 +15,7 @@ module.exports = {
         alias: {
             api: 'api',
             dom: 'dom',
+            logic: 'logic',
         },
     },
 

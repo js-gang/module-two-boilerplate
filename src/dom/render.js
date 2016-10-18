@@ -1,4 +1,5 @@
-import api from 'api/user';  // eslint-disable-line import/no-unresolved
+import api from 'api/user'
+
 import spinner from './spinner';
 
 
@@ -10,9 +11,9 @@ export default class Render {
         for (const accountInfo of accounts) {
             const item = document.createElement('li');
 
-            item.class = 'search-results_item';
+            item.classList.add('search-results_item');
             item.innerText = accountInfo.nickname;
-            item.onclick = this.getHandler(accountInfo.account_id, accountInfo.nickname);
+            item.onclick = this.getUserDetailsHandler(accountInfo.account_id, accountInfo.nickname);
 
             list.appendChild(item);
         }
@@ -28,27 +29,23 @@ export default class Render {
         idNode.innerText = `${nickname} (${accountId})`;
         winsNode.innerText = wins;
         battlesNode.innerText = battles;
-        rateNode.innerText = rate * 100;
+        rateNode.innerText = rate;
     }
 
-    static getHandler(accountId, accountNickname) {
+    static getUserDetailsHandler(accountId, accountNickname) {
         return () => {
             spinner.renderSpinner();
 
-            api.loadUserDetails(accountId)
-              .then(response => response.json())
-              .then((responseBody) => {
-                  const info = responseBody.data[accountId].statistics.all;
-                  const wins = info.wins;
-                  const battles = info.battles;
-                  const rate = wins / battles;
-                  this.renderUserDetails(accountNickname, accountId, wins, battles, rate);
-                  spinner.hideSpinner();
-              })
-              .catch((e) => {
-                  alert(e);
-                  spinner.hideSpinner();
-              });
+            return api.loadUserDetails(accountId)
+                .then(([accountId, wins, battles, rate]) => {
+                    this.renderUserDetails(accountNickname, accountId, wins, battles, rate);
+                })
+                .then(() => {
+                    spinner.hideSpinner();
+                })
+                .catch((e) => {
+                    spinner.hideSpinner();
+                });
         };
     }
 }

@@ -1,8 +1,8 @@
 /* eslint-disable import/no-unresolved */
 
 import api from 'api/user';
-import spinner from 'dom/spinner';
 import render from 'dom/render';
+import spinner from 'dom/spinner';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -20,9 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
         spinner.renderSpinner();
 
         api.loadUsers(input.value)
-            .then(response => response.json())
-            .then((responseBody) => {
-                render.renderSearchResult(responseBody.data);
+            .then(data => {
+                render.renderSearchResult(data);
                 spinner.hideSpinner();
             })
             .catch((e) => {
