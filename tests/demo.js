@@ -1,4 +1,4 @@
-/* eslint-env moacha */
+/* eslint-env mocha */
 
 const chai = require('chai'),
     assert = chai.assert,

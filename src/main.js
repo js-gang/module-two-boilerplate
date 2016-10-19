@@ -30,3 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 });
+
+/*
+TODO
+
+coverage main.js
+test main.js
+handle api errors
+check correct working
+*/
