@@ -3,16 +3,25 @@
   <head>
     <title>WG public API app</title>
   </head>
-  <script src="./main.js" type="text/javascript"></script>
-  <link href="./main.css" rel="stylesheet">
-<body>
-  <div class="search">
-    <input id="username" type="search" placeholder="search for username" name="search" value="">
-    <button id="search" type="button" name="button">Search</button>
-  </div>
-  <div class="search-results">
 
-  </div>
+  <body>
+    <form class="form-inline">
+      <div>
+        <input id="username" class="form-control" type="search" placeholder="search for username" name="search" value="">
+        <button id="search" class="btn btn-info" type="button">Search</button>
+      </div>
+    </form>
 
-</body>
+    <div id="spinner"></div>
+
+    <div>
+      <div id="search-results"></div>
+
+      <div id="user-details">
+        <div><span>ID: </span><span id="user-details-id"></span></div>
+        <div><span>Wins: </span><span id="user-details-wins"></span></div>
+        <div><span>Battles: </span><span id="user-details-battles"></span></div>
+        <div><span>Rate: </span><span id="user-details-rate"></span></div>
+      </div>
+    </div>
 </html>

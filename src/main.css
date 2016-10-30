@@ -2,22 +2,26 @@ body {
   font-family: verdana;
   background-color: #fafafa;
 }
-#search {
-  /* padding-bottom: 40px; */
-}
 
-.search_field {
-  width: 220px;
-}
-
-.spinner {
+#spinner {
   width: 64px;
   height: 64px;
   margin: auto;
   background: url(./images/spinner.gif) no-repeat;
   background-size: 64px 64px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
 }
 
 .search-results_item {
     margin: 8px 0 0;
+}
+
+#user-details {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 200px;
 }
