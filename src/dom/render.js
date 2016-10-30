@@ -44,7 +44,9 @@ export default class Render {
                     spinner.hideSpinner();
                 })
                 .catch((e) => {
+                    alert(e);
                     spinner.hideSpinner();
+                    return Promise.reject(e);
                 });
         };
     }

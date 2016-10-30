@@ -27,15 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch((e) => {
                 alert(e);
                 spinner.hideSpinner();
+                return Promise.reject(e)
             });
     });
 });
-
-/*
-TODO
-
-coverage main.js
-test main.js
-handle api errors
-check correct working
-*/

@@ -66,9 +66,9 @@ describe('dom.render :: api call handler', function() {
             )
 
         render.getUserDetailsHandler(accountId, 'nickname')()
-            .then(() => {
+            .catch((e) => {
                 expect(apiStub.lastCall.args).to.deep.equal([accountId]);
-                //expect(e).to.be.equal(networkError);
+                expect(e).to.be.equal(networkError);
                 done();
             });
     })
