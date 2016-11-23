@@ -1,7 +1,5 @@
 import { handleSearchClick } from './handlers'
 
-import { toggleSpinner } from './helpers'
-
 // import './main.css'
 
 /*
@@ -17,7 +15,3 @@ document.addEventListener('DOMContentLoaded', () => {
   const buttonNode = document.querySelector('#search')
   buttonNode.addEventListener('click', handleSearchClick)
 })
-
-export function testFunc() {
-  toggleSpinner()
-}

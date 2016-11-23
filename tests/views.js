@@ -2,7 +2,9 @@
 
 import { assert } from 'chai'
 
-import { renderUser } from 'views'
+import mockery from 'mockery'
+
+import { renderUser, renderSearchResult } from 'views'
 
 describe('renderUser', function() {
 
@@ -20,5 +22,11 @@ describe('renderUser', function() {
 
         assert.include(node.innerHTML, accountData.nickname)
         assert.include(node.getAttribute('data-id'), accountData.account_id)
+    })
+})
+
+describe('renderSearchResult', function() {
+    it('should handle user click', function() {
+
     })
 })
